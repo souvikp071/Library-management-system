@@ -1,0 +1,123 @@
+package FindingTheDistance;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class FindingTheDistance {
+	double lat;
+	double lang;
+	
+	String name;
+	public FindingTheDistance(double d, double e) {
+		this.lat=d;
+		this.lang=e;
+		
+	}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			double sum=0;
+			Map<Integer, FindingTheDistance>map=new HashMap<Integer, FindingTheDistance>();
+			FindingTheDistance b1=new FindingTheDistance(33,65);
+			FindingTheDistance b2=new FindingTheDistance(41,20);
+			FindingTheDistance b3=new FindingTheDistance(28,3);
+			FindingTheDistance b4=new FindingTheDistance(-14.33333333,-170);
+			FindingTheDistance b5=new FindingTheDistance(42.5,1.5);
+			FindingTheDistance b6=new FindingTheDistance(-12.5,18.5);
+			FindingTheDistance b7=new FindingTheDistance(17.05,-61.8);
+			FindingTheDistance b8=new FindingTheDistance(-34,-64);
+			FindingTheDistance b9=new FindingTheDistance(40,45);
+			FindingTheDistance b10=new FindingTheDistance(12.5,-69.9666666);
+			FindingTheDistance b11=new FindingTheDistance(-27,133);
+			FindingTheDistance b12=new FindingTheDistance(47.33333333,13.33333333);
+			FindingTheDistance b13=new FindingTheDistance(40.5,47.5);
+			FindingTheDistance b14=new FindingTheDistance(24.25,-76);
+			FindingTheDistance b15=new FindingTheDistance(26,50.55);
+			FindingTheDistance b16=new FindingTheDistance(24,90);
+			FindingTheDistance b17=new FindingTheDistance(13.16666666,-59.53333333);
+			FindingTheDistance b18=new FindingTheDistance(53,28);
+			FindingTheDistance b19=new FindingTheDistance(50.83333333,4);
+			FindingTheDistance b20=new FindingTheDistance(17.25,-88.75);
+			map.put(1,b1);
+			map.put(2,b2);
+			map.put(3,b3);
+			map.put(4,b4);
+			map.put(5,b5);
+			map.put(6,b6);
+			map.put(7,b7);
+			map.put(8,b8);
+			map.put(9,b9);
+			map.put(10,b10);
+			map.put(11,b11);
+			map.put(12,b12);
+			map.put(13,b13);
+			map.put(14,b14);
+			map.put(15,b15);
+			map.put(16,b16);
+			map.put(17,b17);
+			map.put(18,b18);
+			map.put(19,b19);
+			map.put(20,b20);
+	
+			for(Map.Entry<Integer, FindingTheDistance> entry:map.entrySet()) {
+				int key=entry.getKey();
+				FindingTheDistance b=entry.getValue();
+				System.out.println(key+ "details:");
+				sum=sum+(6371*(Math.acos(Math.sin(b.lat/57.29577951)*0+Math.cos(b.lat/57.29577951)*1*Math.cos(b.lang/57.29577951))));
+		System.out.println(sum);
+			}
+		}
+		private static int cos(double lat2) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		private static int sin(double lat2) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+}
+
+Answer: 149531.8843389254
+
+
+details of1
+7699.250823564325
+details of2
+12684.179663276316
+details of3
+15814.019081570574
+details of4
+33892.44446942833
+details of5
+38620.610891873286
+details of6
+41089.576405184096
+details of7
+48110.63976527503
+details of8
+55748.53505503751
+details of9
+62109.13489998726
+details of10
+69944.05306906297
+details of11
+84112.60594385173
+details of12
+89532.3600692555
+details of13
+96102.63200384211
+details of14
+104693.23851089098
+details of15
+110828.216241988
+details of16
+120835.75964049011
+details of17
+127553.64811483487
+details of18
+133992.04083678607
+details of19
+139657.08173010248
+details of20
+149531.8843389254
+
